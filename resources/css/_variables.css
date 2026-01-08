@@ -1,13 +1,5 @@
 :root {
-  --color-body-background-o55: #ffffff55;
-  --color-body-background: #ffffff;
-  --color-body-font: #111;
-  --color-border: black;
-  --color-highlight-1: #ffff55;
-  --color-highlight-2: antiquewhite;
-  --color-note-background: #ffffdd;
-  --color-scrollbar: #111;
-  --color-scrollbar-hover: #333;
+  /* --- LAYOUT & FONTS (Shared across all themes) --- */
   --duration-transition-hover: 100ms;
   --font-family-sans-serif: "Noto Sans", sans-serif;
   --font-family-monospace: "JetBrains Mono", monospace;
@@ -23,8 +15,42 @@
   --spacing-half: calc(0.5 * var(--spacing-base));
   --spacing-quarter: calc(0.25 * var(--spacing-base));
   --width-scrollbar: 8px;
-
   --z-index-workbench-content: 1;
   --z-index-workbench-header: 2;
   --z-index-modal: 3;
+
+  /* --- DEFAULT THEME: WHITE (Your Original Colors) --- */
+  --color-body-background-o55: #ffffff55;
+  --color-body-background: #ffffff;
+  --color-body-font: #111;
+  --color-border: black;
+  --color-highlight-1: #ffff55;
+  --color-highlight-2: antiquewhite;
+  --color-note-background: #ffffdd; /* Pale yellow */
+  --color-scrollbar: #111;
+  --color-scrollbar-hover: #333;
+}
+
+/* --- CUSTOM THEME: BLUE (Overrides) --- */
+[data-theme="blue"] {
+  /* Dark Navy Blue Background */
+  --color-body-background: #0f172a; 
+  --color-body-background-o55: #0f172a88;
+
+  /* White/Light Text */
+  --color-body-font: #f1f5f9; 
+
+  /* Lighter Blue Borders (so they are visible on dark bg) */
+  --color-border: #475569; 
+
+  /* Highlights adapted for dark mode */
+  --color-highlight-1: #1e40af; /* Darker blue highlight */
+  --color-highlight-2: #1e293b; /* Secondary dark background */
+
+  /* Note background: Deep Blue instead of Pale Yellow */
+  --color-note-background: #172554; 
+
+  /* Light Scrollbar (so it's visible) */
+  --color-scrollbar: #94a3b8;
+  --color-scrollbar-hover: #cbd5e1;
 }
